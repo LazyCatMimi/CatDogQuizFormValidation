@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="js/process_form.js"></script>
+    <title>Survey - Quynh Vo</title>
+</head>
+<body>
+    <!--HEADER-->
+    <header class="grid-item long"><h1>Are You a Cat or a Dog Person?</h1></header>
+    <!--SIDEBAR-->
+    <section id="side-bar" class="grid-item">
+        <nav>
+            <h2>Navigate</h2>
+            <a href="#person-info-field">Personal Information</a>
+            <a href="#question1">Question 1</a>
+            <a href="#question2">Question 2</a>
+            <a href="#question3">Question 3</a>
+            <a href="#question4">Question 4</a>
+            <a href="#question5">Question 5</a>
+        </nav>
+    </section>
+    <!--MAIN CONTENT-->
+    <main class="grid-item">
+        <h2>Survey Questions</h2>
+        <form name="surveyForm" id="surveyForm">
+            <!--personal info inputs-->
+            <fieldset id="person-info-field">
+                <legend>Personal Information</legend>
+                <input type="checkbox" name="anon" id="anon">
+                <label for="anon">Anonymous</label>
+                <div class="input-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="person_info"/>
+                </div>
+                
+                <div class="input-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="person_info"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="person_info"/>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="person_info"/>
+                </div>
+                
+                <div class="input-group">
+                    <label for="url">Website URL:</label>
+                    <input type="url" id="url" name="person_info"/>
+                </div>                
+            </fieldset>
+            <!--Survey starts-->
+            <fieldset id="survey">
+                <legend>Survey</legend>
+                <!--Question 1-->
+                <h3 class="question" id="question1">Question 1: How would you spend your free weekend?</h3>
+                <div>
+                    <input type="radio" name="question1" id="q1_a" value="dog"/>
+                    <label for="q1_a">Spend time with friends, family, or new people</label>
+                </div>
+                <div>
+                    <input type="radio" name="question1" id="q1_b" value="cat"/>
+                    <label for="q1_b">Expand on my hobbies</label>
+                </div>
+                <div>
+                    <input type="radio" name="question1" id="q1_c" value="dog"/>
+                    <label for="q1_c">Walking around town</label>
+                </div>
+                <div>
+                    <input type="radio" name="question1" id="q1_d" value="cat"/>
+                    <label for="q1_d">Sleep</label>
+                </div><br>
+
+                <!--Question 2-->
+                <h3 class="question" id="question2">Question 2: What trait do you often look for in a friend?</h3>
+                <div>
+                    <input type="radio" name="question2" id="q2_a" value="dog"/>
+                    <label for="q2_a">Loyalty</label>
+                </div>
+                <div>
+                    <input type="radio" name="question2" id="q2_b" value="cat"/>
+                    <label for="q2_b">Uniqueness</label>
+                </div>
+                <div>
+                    <input type="radio" name="question2" id="q2_c" value="cat"/>
+                    <label for="q2_c">Likability</label>
+                </div>
+                <div>
+                    <input type="radio" name="question2" id="q2_d" value="dog"/>
+                    <label for="q2_d">Dependability</label>
+                </div><br>
+
+                <!--Question 3-->
+                <h3 class="question" id="question3">Question 3: How would you describe yourself?</h3>
+                <div>
+                    <input type="radio" name="question3" id="q3_a" value="cat"/>
+                    <label for="q3_a">Chaotic</label>
+                </div>
+                <div>
+                    <input type="radio" name="question3" id="q3_b" value="dog"/>
+                    <label for="q3_b">Energetic</label>
+                </div>
+                <div>
+                    <input type="radio" name="question3" id="q3_c" value="dog"/>
+                    <label for="q3_c">Affectionate</label>
+                </div>
+                <div>
+                    <input type="radio" name="question3" id="q3_d" value="cat"/>
+                    <label for="q3_d">Curious</label>
+                </div><br>
+
+                <!--Question 4-->
+                <h3 class="question" id="question4">Question 4: What kind of hobbies do you engage in?</h3>
+                <div>
+                    <input type="radio" name="question4" id="q4_a" value="cat"/>
+                    <label for="q4_a">Arts and Creatives</label>
+                </div>
+                <div>
+                    <input type="radio" name="question4" id="q4_b" value="dog"/>
+                    <label for="q4_b">Sports and outdoor activities</label>
+                </div>
+                <div>
+                    <input type="radio" name="question4" id="q4_c" value="dog"/>
+                    <label for="q4_c">Collection</label>
+                </div>
+                <div>
+                    <input type="radio" name="question4" id="q4_d" value="cat"/>
+                    <label for="q4_d">Games and Puzzles</label>
+                </div><br>
+
+                <!--Question 5-->
+                <h3 class="question" id="question5">Question 5: How would you describe your life?</h3>
+                <div>
+                    <input type="radio" name="question5" id="q5_a" value="cat"/>
+                    <label for="q5_a">Just chilling, doing my own things.</label>
+                </div>
+                <div>
+                    <input type="radio" name="question5" id="q5_b" value="dog"/>
+                    <label for="q5_b">My life is full of love with my friends and family.</label>
+                </div>
+                <div>
+                    <input type="radio" name="question5" id="q5_c" value="dog"/>
+                    <label for="q5_c">I love my healthy outdoorsy lifestyle.</label>
+                </div>
+                <div>
+                    <input type="radio" name="question5" id="q5_d" value="cat"/>
+                    <label for="q5_d">MUST. CAUSE. CHAOS.</label>
+                </div>
+            </fieldset>
+            <div id="submit-btn-div">
+                <input type="submit" value="See Result!" id="submit-btn">
+            </div>
+        </form>
+    </main>
+    <!--FOOTER-->
+    <footer class="grid-item long">Created for DIG 3716C by Quynh Vo</footer>
+</body>
+</html>

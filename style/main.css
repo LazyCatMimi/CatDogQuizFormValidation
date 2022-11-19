@@ -1,0 +1,196 @@
+/*import stuff*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lexend:wght@500&family=Outfit:wght@300&display=swap');
+:root{
+    /*colors*/
+    --bright-pink:rgb(242, 51, 147);
+    --font-color:rgb(0, 0, 0);
+    --link-color: rgb(177, 34, 134);
+    --back-bg:rgb(223, 170, 189);
+    --nav-bg:rgb(240, 217, 230);
+    --front-bg:rgb(250, 238, 244);
+    --hint-text:rgb(92, 69, 59);
+    --title-color:rgb(255, 255, 255);
+    --title-shadow: rgb(121, 0, 83);
+    /*fonts*/
+    --title-font: 'Fredoka One', cursive;
+    --heading-font:'Lexend', sans-serif;
+    --text-font: 'Outfit', sans-serif;
+}
+
+/*general stuff*/
+html{
+    font-size: 100%;
+    color: var(--font-color);
+    font-family: var(--text-font);
+}
+/*texts and fonts*/
+h1{
+    font-size: 3.5rem;
+    font-family: var(--title-font);
+    margin: 0;
+    padding: 0;
+    color: var(--title-color);
+    top: 50%;
+    text-shadow:
+  -1px -1px 0 var(--title-shadow),  
+   1px -1px 0 var(--title-shadow),
+   -1px 1px 0 var(--title-shadow),
+    1px 1px 0 var(--title-shadow);
+}
+h2,h3{
+    font-family: var(--heading-font);
+}
+a{
+    color: var(--link-color);
+}
+input{
+    font-family: var(--text-font);
+    font-size: 1em;
+    color: rgb(36, 33, 35);
+}
+/*grid stuff*/
+body {
+    font-size: 1.3em;
+    margin: auto;
+    width: 78%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: var(--back-bg);
+}
+.grid-item {
+    background-color: var(--front-bg);
+    padding: 25px;
+    border-radius: 10px;
+}
+#side-bar {
+    grid-column: 1/2;
+    background-color: var(--nav-bg);
+}
+main {
+    grid-column: 2/4;
+}
+.long {
+    grid-column: 1/4;
+    text-align: center;
+}
+header{
+    height: 20vh;
+    background-image: linear-gradient(45deg, rgba(126, 0, 180, 0.526), rgba(226, 26, 169, 0.614)), url(../img/pattern.jpg);
+    background-size: contain;
+    background-position:bottom;
+    background-repeat:repeat-x;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*nav*/
+nav a{
+    display: block;
+    padding: 8px;
+}
+/*fieldset*/
+fieldset{
+    border: 2px solid rgb(233, 209, 227);
+    border-radius: 10px;
+    background-color: rgb(254, 252, 253);
+}
+fieldset legend{
+    color: rgb(157, 124, 149);
+}
+/*space between personal information input text boxes*/
+.input-group {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr;
+    grid-gap: 5px;
+    margin: 10px;
+}
+/*input styles*/
+input[type=text], input[type=url], input[type=email]{
+    padding:6px;
+    border: 1px solid rgb(219, 215, 215);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s;
+}
+input[type=text]:focus, input[type=url]:focus, input[type=email]:focus{
+    border: 1px solid var(--bright-pink);
+}
+input[type=radio]{
+    background-color: aqua;
+}
+#survey div {
+    margin: 10px;
+}
+
+/*submit button*/
+#submit-btn-div{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#submit-btn {
+    margin: 10px 10px 10px auto;
+    padding: 15px 45px;
+    cursor: pointer;
+    border:0;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--bright-pink);
+    
+
+    /*disable button at first, JS will enable it back if all inputs are valid*/
+    pointer-events: none;
+    opacity: 0.2;
+    
+}
+
+
+/*the hint box next to the personal information fields*/
+.hint-box {
+    display: inline;
+    margin: 0;
+    align-content: center;
+
+}
+.hint-box p {
+    display: inline;
+    margin: 0;
+    color: var(--hint-text);
+}
+.hint-box img {
+    width: 18px;
+    margin-right: 5px;
+}
+
+/*class to disbable the personal information fields if anonymous box is checked*/
+.disable-field{
+    transition: 0.5s;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.3;
+}
+/*result div*/
+#result-box img{
+    width: 100%;
+    border-radius: 10px;
+}
+/*media queries*/
+@media screen and (max-width:1100px) {
+    body {
+        width: 100%;
+    }
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        grid-column: auto;
+    }
+}
